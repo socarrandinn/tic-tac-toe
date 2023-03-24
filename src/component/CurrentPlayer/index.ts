@@ -1,0 +1,1 @@
+export {default as CurrentPlayerContent} from './CurrentPlayerContent'

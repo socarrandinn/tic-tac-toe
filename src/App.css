@@ -1,0 +1,63 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.button{
+  background-color: #394032;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: #1E2019;
+}
+
+.td{
+  height: 48px;
+  padding: 8px;
+  position: relative;
+  vertical-align: top;
+  width: 48px;
+  cursor: pointer;
+  /* background-color:#394032; */
+}
+
+.loading {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #587B7F;
+  border-left: 6px solid #fff;
+  animation: loading 1.2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  from {transform: scale(0.7);}
+  to {transform: scale(1);}
+}
+
+.scale{
+  animation-name: scale;
+  animation-duration: 1s;
+}
