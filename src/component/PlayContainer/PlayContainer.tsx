@@ -32,8 +32,8 @@ const PlayContainer = ({ play, setPlay }: PlayContainerProps) => {
 
   return (
     <form onSubmit={handleResetPlay}>
-      <Stack flexDirection='column' gap={10} justifyContent='center'>
-        <h1 style={{ color: '#394032', lineHeight: 1, margin: 0 }}>TIC TAC TOE</h1>
+      <Stack flexDirection='column' gap={10} alignItems='center'>
+        <h1 style={{ color: '#394032', lineHeight: 1, margin: 0, textAlign:'center' }}>TIC TAC TOE</h1>
         {
           !!play?.partidaId ?
           <CurrentPlayerContent {...{ play, esEmpate, player, setPlayer }} /> : undefined
