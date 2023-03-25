@@ -27,7 +27,9 @@ const CurrentPlayerContent = ({ play, esEmpate, player, setPlayer }: CurrentPlay
     width: '50%',
     height: 30,
     border: '1px solid #8DAB7F',
-    borderRadius: 8
+    borderRadius: 8,
+    backgroundColor: '#394032',
+    color:'#fff'
   }
 
 
@@ -75,14 +77,14 @@ const SelectPlayer = ({onCheckPlayer,player, style, esTableroVacio}:SelectPlayer
         onPlayer={() => onCheckPlayer(JUGADOR_ENUM.X)}
         alignItems='center'
         justifyContent='center'
-        style={{ ...style, borderBottom: esX ? '4px solid #8DAB7F' : '1px solid #8DAB7F', ...puntero }}>
+        style={{ ...style, backgroundColor: esX ? '#587B7F' : '#8DAB7F', ...puntero }}>
         {JUGADOR_ENUM.X}
       </Stack>
       <Stack
         onPlayer={() => onCheckPlayer(JUGADOR_ENUM.O)}
         alignItems='center'
         justifyContent='center'
-        style={{ ...style, borderBottom: !esX ? '4px solid #8DAB7F' : '1px solid #8DAB7F', ...puntero}}>
+        style={{ ...style, backgroundColor: !esX ? '#587B7F' : '#8DAB7F', ...puntero}}>
         {JUGADOR_ENUM.O}
       </Stack>
     </>
