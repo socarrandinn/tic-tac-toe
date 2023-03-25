@@ -27,4 +27,8 @@ VITE_URL_API=http://localhost:3000/api yarn dev
 
 ## Licencia
 
+<<<<<<< HEAD
 Este juego está publicado bajo la licencia MIT. Puedes ver los detalles completos de la licencia en el archivo `LICENSE.md` del repositorio.
+=======
+Este juego está publicado bajo la licencia MIT. Puedes ver los detalles completos de la licencia en el archivo `LICENSE.md` del repositorio.
+>>>>>>> f29c240bd080333b80a95c29c18bc5db9a32870b
