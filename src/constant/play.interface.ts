@@ -3,7 +3,7 @@ import { JUGADOR_ENUM } from "./play.enum"
 export interface IPlay{
   partidaId: string,
   estadoTablero: string[],
-  siguienteMovimiento?: IMovimiento
+  siguienteMovimiento?: IMovimiento | {deshacer: boolean}
   historial?:IMovimiento[],
   isBot: boolean,
   currentPlayer: JUGADOR_ENUM,

@@ -1,27 +1,29 @@
-import {memo, FC, PropsWithChildren} from 'react'
+import { memo, FC, PropsWithChildren } from 'react'
 
-type StackProps = PropsWithChildren &{
+
+type StackProps = PropsWithChildren & {
   flexDirection?: 'row' | 'column',
   gap?: number,
   alignItems?: "start" | 'end' | "center",
   justifyContent?: "start" | 'end' | "center" | 'space-between' | 'space-around',
-  style?: any
+  style?: any,
+  onPlayer?: () => void
 }
 
-const Stack:FC<StackProps> = ({flexDirection='row', gap=0,alignItems='start', justifyContent='start',style,children}:StackProps) => {
+const Stack: FC<StackProps> = ({ flexDirection = 'row', gap = 0, alignItems = 'start', justifyContent = 'start', style, onPlayer, children }: StackProps) => {
 
-return (
-<div style={{
-  ...style,
-  display:'flex',
-  flexDirection:flexDirection,
-  gap: gap,
-  alignItems: alignItems,
-  justifyContent: justifyContent
-}}>
-  {children}
-</div>
-);
+  return (
+    <div onClick={onPlayer} style={{
+      ...style,
+      display: 'flex',
+      flexDirection: flexDirection,
+      gap: gap,
+      alignItems: alignItems,
+      justifyContent: justifyContent
+    }}>
+      {children}
+    </div>
+  );
 
 }
 

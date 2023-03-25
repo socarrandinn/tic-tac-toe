@@ -22,7 +22,7 @@ const TableCell = ({ onPlay, value }: TableCellProps) => {
         justifyContent: 'center',
         alignContent: 'center'
       }}>
-        {value === JUGADOR_ENUM.X ? <SVG_X /> : <SVG_O />}
+        {value === JUGADOR_ENUM.X ? <SVG_X /> : (value === JUGADOR_ENUM.O ? <SVG_O /> : undefined)}
       </div>
     </td>
   );

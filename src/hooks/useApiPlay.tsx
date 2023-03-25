@@ -8,6 +8,7 @@ export const useApiPlay = () => {
 
   const postPlay = useCallback(async (play: IPlay) => {
     setIsloading(true)
+
     const response = await fetch(`${URL_API}/tic-tac-toe/play`, {
       method: 'POST',
       headers: {
@@ -16,7 +17,9 @@ export const useApiPlay = () => {
       body: JSON.stringify(play)
     })
     const data = await response.json()
-    setIsloading(false)
+    if (data?.winner === null) {
+      setIsloading(false)
+    }
     return data
   },
     []

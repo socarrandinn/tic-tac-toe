@@ -21,6 +21,10 @@
 .button:hover{
   background-color: #1E2019;
 }
+.button:disabled{
+  background-color: #dddddd;
+  cursor: not-allowed;
+}
 
 .td{
   height: 48px;
